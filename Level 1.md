@@ -18,4 +18,5 @@ Arduino is an open-source electronics platform based on easy-to-use hardware and
   11. [Potentiometer Analog Value Reading](#pot)
   12. [7 Segment Display](#7)
 
-## 1. Hello World LED Blinking {#blink}
+<a name='blink'></a>
+## 1. Hello World LED Blinking
