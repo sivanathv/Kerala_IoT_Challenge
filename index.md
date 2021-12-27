@@ -30,3 +30,19 @@ Arduino is an open-source electronics platform based on easy-to-use hardware and
 
 <a name='blink'></a>
 ## 1. Hello World LED Blinking
+### Circuit
+![Blink](https://user-images.githubusercontent.com/42141371/147439431-b33bf2d9-e204-4fd3-8f45-a0c2bf272e95.png "Tinker Cad Circuit")
+### Code
+```c++
+void setup()
+{pinMode(13, OUTPUT);} // Define LED pin
+
+void loop()
+{
+  digitalWrite(13, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(13, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+}
+```
+### Working video
