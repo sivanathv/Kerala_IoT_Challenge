@@ -31,7 +31,7 @@ Arduino is an open-source electronics platform based on easy-to-use hardware and
 <a name='blink'></a>
 ## 1. Hello World LED Blinking
 ### Circuit
-![Blink](https://user-images.githubusercontent.com/42141371/147439431-b33bf2d9-e204-4fd3-8f45-a0c2bf272e95.png "Tinker Cad Circuit")
+![Blink](https://user-images.githubusercontent.com/42141371/147439431-b33bf2d9-e204-4fd3-8f45-a0c2bf272e95.png "LED Blinking")
 ### Code
 ```c++
 void setup()
@@ -46,3 +46,48 @@ void loop()
 }
 ```
 ### Working video
+
+<a name='traffic'></a>
+## 2. Traffic Light
+### Circuit
+![Traffic](https://user-images.githubusercontent.com/42141371/147449316-8cab4b32-3f26-4a36-9c09-2133391f27f3.png "Traffic light")
+### Code
+```c++
+int red =13;
+int yellow =11;
+int green =9;
+void setup()
+{
+pinMode(red, OUTPUT);
+pinMode(yellow, OUTPUT);
+pinMode(green, OUTPUT);
+}
+void loop()
+{
+digitalWrite(green, HIGH);// turn on green LED
+delay(2500);
+digitalWrite(green, LOW);// turn off green LED
+digitalWrite(yellow, HIGH);// turn on yellow LED
+delay(2500);
+digitalWrite(yellow, LOW);// turn off yellow LED
+digitalWrite(red, HIGH);// turn on red LED
+delay(2500);
+digitalWrite(red, LOW);// turn off red LED
+delay(500);
+//turn on all LEDs
+digitalWrite(green, HIGH);
+digitalWrite(yellow, HIGH);
+digitalWrite(red, HIGH);
+delay(500);
+//turn off all LEDs
+digitalWrite(green, LOW);
+digitalWrite(yellow, LOW);
+digitalWrite(red, LOW);
+delay(500);
+}
+```
+### Working Video
+
+<a name="chase"></a>
+## 3. LED Chasing Effect
+### Circuit
