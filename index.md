@@ -263,3 +263,56 @@ void loop()
 ```
 ### Working Video
 [![LM35 Temperature Sensor](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/147651248-b88c1fb7-a752-4d93-8e70-3c013b0b15fd.mp4)
+<a name="ir"></a>
+## 10. IR Remote Control Using TSOP
+### Circuit
+![IR Remote Control Using TSOP](https://user-images.githubusercontent.com/42141371/156557219-5d116a19-9d02-4f34-a4e3-58fde902468a.png "IR Remote Control Using TSOP")
+### Code
+```
+#include <IRremote.h>
+int IRpin=11;	//initialising IR pin
+IRrecv Sensor(IRpin);	//IR reciever as "Sensor"
+decode_results rslt;	//decode results into "result"
+
+void setup()
+{
+  Sensor.enableIRIn();
+  Serial.begin(9600);
+  pinMode(7,OUTPUT);
+  pinMode(6,OUTPUT);
+  pinMode(5,OUTPUT);
+  pinMode(4,OUTPUT);
+  pinMode(3,OUTPUT);
+  pinMode(2,OUTPUT);
+  pinMode(8,INPUT);
+}
+
+void loop()
+{
+  if(Sensor.decode(&rslt))  //without this condition, the serial monitor will print '0' continously
+  {
+    Serial.println(rslt.value, HEX);  //to print the above value in HEX code
+  	LED(); //all LEDs off and all LEDs ON
+    Sensor.resume();
+  }
+}  
+void LED()
+{
+    if (rslt.value==0xFD00FF)
+    {
+      if(digitalRead(8)==0)
+      {
+        for(int i=7;i--;i>=2)
+        {digitalWrite(i,1);} //LEDs ON
+      }
+      else
+      {
+        for(int i=7;i--;i>=2)
+      	{digitalWrite(i,0);} //LEDs OFF
+  	  }
+    }
+}
+```
+### Working Video
+[![IR Remote Control Using TSOP](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/156557808-94e6825d-8916-4444-9c05-df67e2966d6f.mp4)
+<a name='pot'></a>
