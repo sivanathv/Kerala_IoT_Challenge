@@ -12,7 +12,7 @@ Foxlab Makerspace in association with GTech - Group of Technology Companies in K
 ## Introduction to Arduino
 Arduino is an open-source electronics platform based on easy-to-use hardware and software. Arduino boards are able to read inputs - light on a sensor, a finger on a button, or a Twitter message - and turn it into an output - activating a motor, turning on an LED, publishing something online. You can tell your board what to do by sending a set of instructions to the microcontroller on the board. To do so you use the Arduino programming language (based on Wiring), and the Arduino Software (IDE), based on Processing.
 
-![Photo by Harrison Broadbent on Unsplash](https://user-images.githubusercontent.com/42141371/147653714-ae3bd4f6-3d1e-40ab-980a-969db8f7584c.png "Arduino UNO")
+<img src="https://user-images.githubusercontent.com/42141371/147653714-ae3bd4f6-3d1e-40ab-980a-969db8f7584c.png" alt="Arduino UNO" width="500" height="281">
 
 ## Experiments
   1. [Hello World LED Blinking](#blink)
