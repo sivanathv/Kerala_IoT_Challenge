@@ -268,7 +268,7 @@ void loop()
 ### Circuit
 ![IR Remote Control Using TSOP](https://user-images.githubusercontent.com/42141371/156557219-5d116a19-9d02-4f34-a4e3-58fde902468a.png "IR Remote Control Using TSOP")
 ### Code
-```
+```c++
 #include <IRremote.h>
 int IRpin=11;	//initialising IR pin
 IRrecv Sensor(IRpin);	//IR reciever as "Sensor"
@@ -321,7 +321,7 @@ void LED()
 ### Circuit
 ![Potentiometer Analog Value Reading](https://user-images.githubusercontent.com/42141371/156591037-1178c8e6-caed-45b5-acfc-643e3b41b2f6.png "Potentiometer Analog Value Reading")
 ### Code
-```
+```c++
 void setup()
 {
   pinMode(A0, INPUT);
@@ -342,7 +342,7 @@ void loop()
 ### Circuit
 ![7-Segment Display](https://user-images.githubusercontent.com/42141371/156623615-ab0ea23c-2c10-4609-99d7-75303dd1dc35.png "7 Segment Display")
 ### Code
-```
+```c++
 //Program to repeatedly count from 0 to 9 using 7-segment
 //NOTE: In this program, DP terminal is grounded
 int a=2;
