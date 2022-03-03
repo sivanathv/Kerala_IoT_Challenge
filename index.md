@@ -272,7 +272,7 @@ void loop()
 #include <IRremote.h>
 int IRpin=11;	//initialising IR pin
 IRrecv Sensor(IRpin);	//IR reciever as "Sensor"
-decode_results rslt;	//decode results into "result"
+decode_results rslt;	//decode results into "rslt"
 
 void setup()
 {
@@ -291,7 +291,7 @@ void loop()
 {
   if(Sensor.decode(&rslt))  //without this condition, the serial monitor will print '0' continously
   {
-    Serial.println(rslt.value, HEX);  //to print the above value in HEX code
+    Serial.println(rslt.value, HEX);  //to print value in HEX code
   	LED(); //all LEDs off and all LEDs ON
     Sensor.resume();
   }
