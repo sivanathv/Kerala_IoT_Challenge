@@ -26,7 +26,7 @@ Arduino is an open-source electronics platform based on easy-to-use hardware and
   9. [LM35 Temperature Sensor](#lm35)
   10. [IR Remote Control Using TSOP](#ir)
   11. [Potentiometer Analog Value Reading](#pot)
-  12. [7 Segment Display](#7)
+  12. [7-Segment Display](#7)
 
 <a name='blink'></a>
 ## 1. Hello World LED Blinking
@@ -317,6 +317,7 @@ void LED()
 [![IR Remote Control Using TSOP](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/156557808-94e6825d-8916-4444-9c05-df67e2966d6f.mp4)
 <a name='pot'></a>
 ## 11. Potentiometer Analog Value Reading
+![Potentiometer](https://user-images.githubusercontent.com/42141371/156624578-c2e02e0c-0a3b-4c5c-911e-e75ca56d9a35.png "Potentiometer") ![Potentiometer](https://user-images.githubusercontent.com/42141371/156624711-f5951159-1326-4591-8065-a17bf54e0b2a.png "Potentiometer")
 ### Circuit
 ![Potentiometer Analog Value Reading](https://user-images.githubusercontent.com/42141371/156591037-1178c8e6-caed-45b5-acfc-643e3b41b2f6.png "Potentiometer Analog Value Reading")
 ### Code
@@ -336,3 +337,151 @@ void loop()
 ### Working Video
 [![Potentiometer Analog Value Reading](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/156591570-c1c6959d-e382-4ffc-8a7f-8c66c6e73781.mp4)
 <a name='7'></a>
+## 12. 7-Segment Display
+![7-Segment Display Configuration](https://user-images.githubusercontent.com/42141371/156623818-48aec383-050f-4258-8684-33fb0630f114.png "7 Segment Display Configuration")
+### Circuit
+![7-Segment Display](https://user-images.githubusercontent.com/42141371/156623615-ab0ea23c-2c10-4609-99d7-75303dd1dc35.png "7 Segment Display")
+### Code
+```
+//Program to repeatedly count from 0 to 9 using 7-segment
+//NOTE: In this program, DP terminal is grounded
+int a=2;
+int b=3;
+int c=4;
+int d=5;
+int e=6;
+int f=7;
+int g=8;
+void setup()
+{
+  for(int i=2;i<=8;i++)
+  {pinMode(i, OUTPUT);}
+}
+void loop()
+{
+  zero();
+  delay(1000);
+  one();
+  delay(1000);
+  two();
+  delay(1000);
+  three();
+  delay(1000);
+  four();
+  delay(1000);
+  five();
+  delay(1000);
+  six();
+  delay(1000);
+  seven();
+  delay(1000);
+  eight();
+  delay(1000);
+  nine();
+  delay(1000);
+}
+//Individual number functions:
+
+void zero()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,HIGH);
+  digitalWrite(f,HIGH);
+  digitalWrite(g,LOW);
+}
+void one()
+{
+  digitalWrite(a,LOW);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,LOW);
+  digitalWrite(e,LOW);
+  digitalWrite(f,LOW);
+  digitalWrite(g,LOW);
+}
+void two()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,LOW);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,HIGH);
+  digitalWrite(f,LOW);
+  digitalWrite(g,HIGH);
+}
+void three()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,LOW);
+  digitalWrite(f,LOW);
+  digitalWrite(g,HIGH);
+}
+void four()
+{
+  digitalWrite(a,LOW);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,LOW);
+  digitalWrite(e,LOW);
+  digitalWrite(f,HIGH);
+  digitalWrite(g,HIGH);
+}
+void five()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,LOW);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,LOW);
+  digitalWrite(f,HIGH);
+  digitalWrite(g,HIGH);
+}
+void six()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,LOW);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,HIGH);
+  digitalWrite(f,HIGH);
+  digitalWrite(g,HIGH);
+}
+void seven()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,LOW);
+  digitalWrite(e,LOW);
+  digitalWrite(f,LOW);
+  digitalWrite(g,LOW);
+}
+void eight()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,HIGH);
+  digitalWrite(f,HIGH);
+  digitalWrite(g,HIGH);
+}
+void nine()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,LOW);
+  digitalWrite(f,HIGH);
+  digitalWrite(g,HIGH);
+}
+```
+### Working Video
+[![7-Segment Display](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/156624085-119d1a3f-004c-4cb9-a1f4-2cd474ee6caf.mp4)
