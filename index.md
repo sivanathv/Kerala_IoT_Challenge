@@ -316,3 +316,23 @@ void LED()
 ### Working Video
 [![IR Remote Control Using TSOP](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/156557808-94e6825d-8916-4444-9c05-df67e2966d6f.mp4)
 <a name='pot'></a>
+## 11. Potentiometer Analog Value Reading
+### Circuit
+![Potentiometer Analog Value Reading](https://user-images.githubusercontent.com/42141371/156591037-1178c8e6-caed-45b5-acfc-643e3b41b2f6.png "Potentiometer Analog Value Reading")
+### Code
+```
+void setup()
+{
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+}
+void loop()
+{
+  int pot=analogRead(A0); //Read value from potentiometer
+  Serial.println(pot); //Print on Serial monitor
+  delay(100); // Wait for 100 milliseconds
+}
+```
+### Working Video
+[![Potentiometer Analog Value Reading](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/156591570-c1c6959d-e382-4ffc-8a7f-8c66c6e73781.mp4)
+<a name='7'></a>
