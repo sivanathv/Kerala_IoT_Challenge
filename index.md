@@ -31,7 +31,7 @@ Arduino is an open-source electronics platform based on easy-to-use hardware and
 <a name='blink'></a>
 ## 1. Hello World LED Blinking
 ### Circuit
-![Blink](https://user-images.githubusercontent.com/42141371/147439431-b33bf2d9-e204-4fd3-8f45-a0c2bf272e95.png "LED Blinking")
+![Blink](https://user-images.githubusercontent.com/42141371/147439431-b33bf2d9-e204-4fd3-8f45-a0c2bf272e95.png "LED Blinking") 
 ### Code
 ```c++
 void setup()
@@ -46,7 +46,10 @@ void loop()
 }
 ```
 ### Working video
+#### Virtual Simulation
 [![Hello World LED Blinking](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/147592332-c1bef299-fce7-4259-ad8d-5d14d0021d13.mp4)
+#### Actual Simulation
+[![LED Blink](https://user-images.githubusercontent.com/42141371/156929091-70ecedef-c29e-4fd8-866b-dc6469160eff.png)](https://user-images.githubusercontent.com/42141371/156928344-f8274cd9-22fb-4a45-9c52-34d6962859c3.mp4)
 <a name='traffic'></a>
 ## 2. Traffic Light
 ### Circuit
@@ -87,7 +90,10 @@ delay(500);
 }
 ```
 ### Working Video
+#### Virtual Simulation
 [![Traffic Light](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/147639177-00913916-978b-44c9-a86e-03c30ed109b2.mp4)
+#### Actual Simulation
+[![Traffic light](https://user-images.githubusercontent.com/42141371/156929928-07d33c10-c779-45e2-a814-db09164aa359.png)](https://user-images.githubusercontent.com/42141371/156930082-5e20e29e-c9e6-4f8b-914d-3fe7ba87b11e.mp4)
 <a name="chase"></a>
 ## 3. LED Chasing Effect
 ### Circuit
@@ -116,7 +122,10 @@ void loop()
 }
 ```
 ### Working Video
-[![Hello World LED Blinking](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/147650934-0d98e046-0646-4c82-952b-1868d1e0dc0c.mp4)
+#### Virtual Simulation
+[![LED Chasing Effect](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/147650934-0d98e046-0646-4c82-952b-1868d1e0dc0c.mp4)
+#### Actual Simulation
+[![LED chase](https://user-images.githubusercontent.com/42141371/156930749-93c12c56-e0f6-41a8-98b1-436278d233a4.png)](https://user-images.githubusercontent.com/42141371/156930740-69e1f40e-7b60-483d-b2a9-9d36b6773a08.mp4)
 <a name="button"></a>
 ## 4. Button Controlled LED
 ### Circuit
@@ -139,7 +148,10 @@ void loop()
 }
 ```
 ### Working Video
-[![LED Chasing Effect](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/147651006-88087db4-df5f-42c5-8760-112afb049c99.mp4)
+#### Virtual Simulation
+[![Button Controlled LED](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/147651006-88087db4-df5f-42c5-8760-112afb049c99.mp4)
+#### Actual Simulation
+[![Push button LED](https://user-images.githubusercontent.com/42141371/156930835-97892b24-b8b9-41b1-884d-1bf33f3a92e3.png)](https://user-images.githubusercontent.com/42141371/156930883-8520961d-1931-436c-828a-761fcbaa7dd6.mp4)
 <a name="buzzer"></a>
 ## 5. Buzzer
 ### Circuit
@@ -156,7 +168,10 @@ void loop()
 }
 ```
 ### Working Video
+#### Virtual Simulation
 [![Buzzer](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/147651058-adfa6a53-5818-4b17-a56c-48e41d638368.mp4)
+#### Actual Simulation
+[![Buzzer](https://user-images.githubusercontent.com/42141371/156930910-24a3ab22-12cd-49e6-bf38-a34ed7b57793.png)](https://user-images.githubusercontent.com/42141371/156930982-bf02cf13-3cf8-4af5-863c-dee60ef6fd71.mp4)
 <a name="rgb"></a>
 ## 6. RGB LED
 ### Circuit
@@ -181,7 +196,10 @@ void loop()
 }
 ```
 ### Working Video
+#### Virtual Simulation
 [![RGB LED](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/147651111-370e901f-2e3e-4735-92b0-77d76352cef9.mp4)
+#### Actual Simulation
+[![RGB light](https://user-images.githubusercontent.com/42141371/156930998-0859008e-8a86-47d0-a116-561c72ff9261.png)](https://user-images.githubusercontent.com/42141371/156931007-53fe05e9-c4fb-42b8-b643-4e2ffc282ecc.mp4)
 <a name="ldr"></a>
 ## 7. LDR Light Sensor
 ### Circuit
@@ -201,12 +219,15 @@ void loop()
 {
   light=analogRead(ldr); //read analog value from LDR
   Serial.println(light); //print value on serial monitor
-  analogWrite(led,light/4); //intensity of LED depends on analog value
-  delay(10);
+  analogWrite(led,light/100); //intensity of LED depends on analog value
+  delay(500);
 }
 ```
 ### Working Video
+#### Virtual Simulation
 [![LDR Light Sensor](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/147651162-dee65723-c9de-4fed-8caa-be018b63b66a.mp4)
+#### Actual Simulation
+[![LDR light sensor](https://user-images.githubusercontent.com/42141371/156931108-fc9fbc0e-8b37-4080-84bc-9c5d76f26e93.png)](https://user-images.githubusercontent.com/42141371/156931122-27f9326e-f8ac-49d0-978e-af1151f33854.mp4)
 <a name="flame"></a>
 ## 8. Flame Sensor
 ### Circuit
@@ -234,11 +255,14 @@ void loop()
   {
     digitalWrite(buzz, LOW); //buzzer turns off
   }
-  delay(10);
+  delay(200);
 }
 ```
 ### Working Video
+#### Virtual Simulation
 [![Flame Sensor](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/147651208-216cc8f7-bc0a-4a53-a27a-4e04785f6190.mp4)
+#### Actual Simulation
+[![Flame sensor](https://user-images.githubusercontent.com/42141371/156931170-498194ae-67ec-465f-9faa-727bfe9aa4c6.png)](https://user-images.githubusercontent.com/42141371/156931197-85d5e5fe-8a8a-4386-8c76-dd9dcc308bb2.mp4)
 <a name="lm35"></a>
 ## 9. LM35 Temperature Sensor
 ### Circuit
@@ -262,12 +286,16 @@ void loop()
 }
 ```
 ### Working Video
+#### Virtual Simulation
 [![LM35 Temperature Sensor](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/147651248-b88c1fb7-a752-4d93-8e70-3c013b0b15fd.mp4)
+#### Actual Simulation
+[![Temp sensor](https://user-images.githubusercontent.com/42141371/156931223-ae6b00be-2314-4733-b8f4-5342a872a5f2.png)](https://user-images.githubusercontent.com/42141371/156931221-a1926df0-b51a-4175-b747-a189af1f57a4.mp4)
 <a name="ir"></a>
 ## 10. IR Remote Control Using TSOP
 ### Circuit
 ![IR Remote Control Using TSOP](https://user-images.githubusercontent.com/42141371/156557219-5d116a19-9d02-4f34-a4e3-58fde902468a.png "IR Remote Control Using TSOP")
 ### Code
+#### Version 2
 ```c++
 #include <IRremote.h>
 int IRpin=11;	//initialising IR pin
@@ -291,7 +319,7 @@ void loop()
 {
   if(Sensor.decode(&rslt))  //without this condition, the serial monitor will print '0' continously
   {
-    Serial.println(rslt.value, HEX);  //to print value in HEX code
+    Serial.println(rslt.value, HEX);  //to print the value in HEX code
   	LED(); //all LEDs off and all LEDs ON
     Sensor.resume();
   }
@@ -313,8 +341,55 @@ void LED()
     }
 }
 ```
+#### Version 3
+```c++
+#include <IRremote.h>
+int IRpin=11;  //initialising IR pin
+
+void setup()
+{
+  IrReceiver.begin(IRpin, ENABLE_LED_FEEDBACK);
+  Serial.begin(9600);
+  pinMode(7,OUTPUT);
+  pinMode(6,OUTPUT);
+  pinMode(5,OUTPUT);
+  pinMode(4,OUTPUT);
+  pinMode(3,OUTPUT);
+  pinMode(2,OUTPUT);
+  pinMode(8,INPUT);
+}
+
+void loop()
+{
+  if(IrReceiver.decode())  //without this condition, the serial monitor will print '0' continously
+  {
+    Serial.println(IrReceiver.decodedIRData.decodedRawData, HEX);  //to print value in HEX code
+    LED(); //all LEDs off and all LEDs ON
+    IrReceiver.resume();
+  }
+}  
+void LED()
+{
+    if (IrReceiver.decodedIRData.decodedRawData==0xFD00FF)
+    {
+      if(digitalRead(8)==0)
+      {
+        for(int i=7;i--;i>=2)
+        {digitalWrite(i,1);} //LEDs ON
+      }
+      else
+      {
+        for(int i=7;i--;i>=2)
+        {digitalWrite(i,0);} //LEDs OFF
+      }
+    }
+}
+```
 ### Working Video
+#### Virtual Simulation
 [![IR Remote Control Using TSOP](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/156557808-94e6825d-8916-4444-9c05-df67e2966d6f.mp4)
+#### Actual Simulation
+
 <a name='pot'></a>
 ## 11. Potentiometer Analog Value Reading
 ![Potentiometer](https://user-images.githubusercontent.com/42141371/156624578-c2e02e0c-0a3b-4c5c-911e-e75ca56d9a35.png "Potentiometer") ![Potentiometer](https://user-images.githubusercontent.com/42141371/156624711-f5951159-1326-4591-8065-a17bf54e0b2a.png "Potentiometer")
@@ -335,7 +410,10 @@ void loop()
 }
 ```
 ### Working Video
+#### Virtual Simulation
 [![Potentiometer Analog Value Reading](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/156591570-c1c6959d-e382-4ffc-8a7f-8c66c6e73781.mp4)
+#### Actual Simulation
+[![Potentiometer](https://user-images.githubusercontent.com/42141371/156931280-e1afeecb-f022-476f-879e-e4f983684b72.png)](https://user-images.githubusercontent.com/42141371/156931304-a9ba95bb-1f47-46b7-ad48-2ee7596c5c9f.mp4)
 <a name='7'></a>
 ## 12. 7-Segment Display
 ![7-Segment Display Configuration](https://user-images.githubusercontent.com/42141371/156623818-48aec383-050f-4258-8684-33fb0630f114.png "7 Segment Display Configuration")
@@ -484,4 +562,6 @@ void nine()
 }
 ```
 ### Working Video
+#### Virtual Simulation
 [![7-Segment Display](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/156624085-119d1a3f-004c-4cb9-a1f4-2cd474ee6caf.mp4)
+#### Actual Simulation
