@@ -326,16 +326,16 @@ void loop()
 }  
 void LED()
 {
-    if (rslt.value==0xFD00FF)
+    if (rslt.value==0xFD00FF) //The hex code could be different in actual simulation (depends on the remote)
     {
       if(digitalRead(8)==0)
       {
-        for(int i=7;i--;i>=2)
+        for(int i=8;i--;i>=2)
         {digitalWrite(i,1);} //LEDs ON
       }
       else
       {
-        for(int i=7;i--;i>=2)
+        for(int i=8;i--;i>=2)
       	{digitalWrite(i,0);} //LEDs OFF
   	  }
     }
@@ -370,16 +370,16 @@ void loop()
 }  
 void LED()
 {
-    if (IrReceiver.decodedIRData.decodedRawData==0xFD00FF)
+    if (IrReceiver.decodedIRData.decodedRawData==0xFD00FF) //The hex code could be different in actual simulation (depends on the remote)
     {
       if(digitalRead(8)==0)
       {
-        for(int i=7;i--;i>=2)
+        for(int i=8;i--;i>=2)
         {digitalWrite(i,1);} //LEDs ON
       }
       else
       {
-        for(int i=7;i--;i>=2)
+        for(int i=8;i--;i>=2)
         {digitalWrite(i,0);} //LEDs OFF
       }
     }
