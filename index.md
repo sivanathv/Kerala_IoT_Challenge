@@ -27,6 +27,7 @@ Arduino is an open-source electronics platform based on easy-to-use hardware and
   10. [IR Remote Control Using TSOP](#ir)
   11. [Potentiometer Analog Value Reading](#pot)
   12. [7-Segment Display](#7)
+  13. [Assignments](#assign)
 
 <a name='blink'></a>
 ## 1. Hello World LED Blinking
@@ -292,6 +293,7 @@ void loop()
 [![Temp sensor](https://user-images.githubusercontent.com/42141371/156931223-ae6b00be-2314-4733-b8f4-5342a872a5f2.png)](https://user-images.githubusercontent.com/42141371/156931221-a1926df0-b51a-4175-b747-a189af1f57a4.mp4)
 <a name="ir"></a>
 ## 10. IR Remote Control Using TSOP
+![TSOP1738](https://user-images.githubusercontent.com/42141371/159976924-ec9f23fe-3b69-4e91-b594-7780b3799da2.png "TSOP1738 Sensor")
 ### Circuit
 ![IR Remote Control Using TSOP](https://user-images.githubusercontent.com/42141371/156557219-5d116a19-9d02-4f34-a4e3-58fde902468a.png "IR Remote Control Using TSOP")
 ### Code
@@ -389,7 +391,7 @@ void LED()
 #### Virtual Simulation
 [![IR Remote Control Using TSOP](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/156557808-94e6825d-8916-4444-9c05-df67e2966d6f.mp4)
 #### Actual Simulation
-
+[![TSOP Remote](https://user-images.githubusercontent.com/42141371/159973968-d715ca46-593d-4c2f-b866-58a27ae92a4c.png)](https://user-images.githubusercontent.com/42141371/159973708-44e38480-55ae-488a-92d4-f3130ea2633a.mp4)
 <a name='pot'></a>
 ## 11. Potentiometer Analog Value Reading
 ![Potentiometer](https://user-images.githubusercontent.com/42141371/156624578-c2e02e0c-0a3b-4c5c-911e-e75ca56d9a35.png "Potentiometer") ![Potentiometer](https://user-images.githubusercontent.com/42141371/156624711-f5951159-1326-4591-8065-a17bf54e0b2a.png "Potentiometer")
@@ -565,3 +567,4 @@ void nine()
 #### Virtual Simulation
 [![7-Segment Display](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/156624085-119d1a3f-004c-4cb9-a1f4-2cd474ee6caf.mp4)
 #### Actual Simulation
+[![7 segment counter](https://user-images.githubusercontent.com/42141371/159974762-836d7e17-ccab-4894-a14b-22dc6f2a3ca9.png)](https://user-images.githubusercontent.com/42141371/159974976-85aebc98-22dc-4b57-acf3-cd9ff18243cb.mp4)
