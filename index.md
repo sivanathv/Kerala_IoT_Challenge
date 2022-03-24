@@ -568,3 +568,187 @@ void nine()
 [![7-Segment Display](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/156624085-119d1a3f-004c-4cb9-a1f4-2cd474ee6caf.mp4)
 #### Actual Simulation
 [![7 segment counter](https://user-images.githubusercontent.com/42141371/159974762-836d7e17-ccab-4894-a14b-22dc6f2a3ca9.png)](https://user-images.githubusercontent.com/42141371/159974976-85aebc98-22dc-4b57-acf3-cd9ff18243cb.mp4)
+<a name='assign'></a>
+## Assignment 1
+### Create an automatic night lamp model using LDR and LED
+### Circuit
+![LED & LDR](https://user-images.githubusercontent.com/42141371/159978035-4588ceee-c8a2-458f-8ce7-402b2ba88057.png "Automatic night lamp")
+### Code
+```c++
+void setup()
+{
+  pinMode(12,OUTPUT);
+  pinMode(A0,INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  int ldr= analogRead(A0); //light value of LDR
+  Serial.println(ldr);
+  if (ldr<490)	//This condition can change in practical application
+  {digitalWrite(12,1);}
+  else
+  {digitalWrite(12,0);}
+  delay(100);
+}
+```
+### Working Video
+#### Virtual Simulation
+[![LED_LDR](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/159978660-7b57178c-085c-4582-9346-a1b224cca667.mp4)
+#### Actual Simulation
+[![LED & LDR](https://user-images.githubusercontent.com/42141371/159978374-5ebc0804-870f-4465-b21f-352608231065.png)](https://user-images.githubusercontent.com/42141371/159978216-eb8a447b-d339-43ce-80e0-78b96b737280.mp4)
+## Assignment 2
+### Create a Digital Dice using 7 Segment Display and Push Button
+### Circuit
+![Digital dice](https://user-images.githubusercontent.com/42141371/159980590-8d367f93-0b0d-4860-a6e5-6add1b10c9f8.png "Digital dice using 7 segment")
+### Code
+```c++
+int a=2;
+int b=3;
+int c=4;
+int d=5;
+int e=6;
+int f=7;
+int g=8;
+void setup()
+{
+  for(int i=2;i<=8;i++)
+  {pinMode(i, OUTPUT);}
+  pinMode(9,INPUT);
+  Serial.begin(9600);
+}
+void loop()
+{
+  if (pulseIn(9,HIGH)) //to detect input from button
+  {
+    roll(); //Function to roll the dice
+    int no=random(1,7); //random no. from 1 to 6
+    Serial.println(no);
+    switch (no)
+    {case 1:one();break;
+    case 2:two();break;
+    case 3:three();break;
+    case 4:four();break;
+    case 5:five();break;
+	case 6:six();break;}
+  }
+}
+//Individual number functions:
+
+void roll()
+{
+  one();delay(100);
+  two();delay(100);
+  three();delay(100);
+  four();delay(100);
+  five();delay(100);
+  six();delay(100);
+}
+
+void zero()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,HIGH);
+  digitalWrite(f,HIGH);
+  digitalWrite(g,LOW);
+}
+void one()
+{
+  digitalWrite(a,LOW);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,LOW);
+  digitalWrite(e,LOW);
+  digitalWrite(f,LOW);
+  digitalWrite(g,LOW);
+}
+void two()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,LOW);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,HIGH);
+  digitalWrite(f,LOW);
+  digitalWrite(g,HIGH);
+}
+void three()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,LOW);
+  digitalWrite(f,LOW);
+  digitalWrite(g,HIGH);
+}
+void four()
+{
+  digitalWrite(a,LOW);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,LOW);
+  digitalWrite(e,LOW);
+  digitalWrite(f,HIGH);
+  digitalWrite(g,HIGH);
+}
+void five()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,LOW);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,LOW);
+  digitalWrite(f,HIGH);
+  digitalWrite(g,HIGH);
+}
+void six()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,LOW);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,HIGH);
+  digitalWrite(f,HIGH);
+  digitalWrite(g,HIGH);
+}
+void seven()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,LOW);
+  digitalWrite(e,LOW);
+  digitalWrite(f,LOW);
+  digitalWrite(g,LOW);
+}
+void eight()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,HIGH);
+  digitalWrite(f,HIGH);
+  digitalWrite(g,HIGH);
+}
+void nine()
+{
+  digitalWrite(a,HIGH);
+  digitalWrite(b,HIGH);
+  digitalWrite(c,HIGH);
+  digitalWrite(d,HIGH);
+  digitalWrite(e,LOW);
+  digitalWrite(f,HIGH);
+  digitalWrite(g,HIGH);
+}
+```
+### Working Video
+#### Virtual Simulation
+[![Digital dice](https://user-images.githubusercontent.com/42141371/147594549-f0fd04db-4021-4392-a5e3-55f934bdce98.png)](https://user-images.githubusercontent.com/42141371/159980008-dc85517a-7bac-4cec-bde0-fc5b5d3115b0.mp4)
+#### Actual Simulation
+[![Digital dice](https://user-images.githubusercontent.com/42141371/159980171-ab775b06-d087-44d8-829f-d83e8b16cea9.jpg)](https://user-images.githubusercontent.com/42141371/159980461-56f17b56-2aa7-420d-a495-1013db69bc31.mp4)
