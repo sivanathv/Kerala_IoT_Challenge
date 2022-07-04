@@ -1,2 +1,2 @@
 # Kerala IoT Challenge Index page
-This is the index page of the IoT program and contains all the assignments and experiments.
+This is the index page of the IoT program and contains the introduction and the links to different IoT levels.
